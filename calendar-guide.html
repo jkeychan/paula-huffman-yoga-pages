@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adding a Class or Event &mdash; Paula Huffman</title>
+<style>
+  :root{
+    --ivory:#F6F3EC;
+    --paper:#EFEAE0;
+    --ink:#2B3630;
+    --slate:#5B6B63;
+    --sage:#8FA396;
+    --sage-soft:#DCE3DD;
+    --brass:#B08D57;
+    --brass-soft:#E7DAC4;
+    --card-border:rgba(43,54,48,0.12);
+    --chip-bg:#ffffff;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:0 20px;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:56px 0 80px;}
+
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--brass);
+    font-weight:600;
+    margin:0 0 14px;
+  }
+  h1{
+    font-family:Georgia,"Iowan Old Style","Palatino Linotype","Book Antiqua",serif;
+    font-weight:400;
+    font-size:clamp(30px,5vw,40px);
+    line-height:1.15;
+    margin:0 0 14px;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+  .sub{
+    font-size:16.5px;
+    line-height:1.55;
+    color:var(--slate);
+    max-width:52ch;
+    margin:0 0 36px;
+  }
+
+  /* quick reference strip */
+  .quickref{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin:0 0 48px;
+  }
+  .qr-tile{
+    background:var(--paper);
+    border:1px solid var(--card-border);
+    border-radius:10px;
+    padding:16px 14px;
+  }
+  .qr-num{
+    font-family:Georgia,serif;
+    font-size:13px;
+    color:var(--brass);
+    font-weight:700;
+    margin:0 0 6px;
+  }
+  .qr-tile p{margin:0;font-size:13.5px;color:var(--ink);line-height:1.4;}
+
+  /* steps */
+  .steps{display:flex;flex-direction:column;gap:0;margin:0 0 44px;}
+  .step{
+    display:grid;
+    grid-template-columns:40px 1fr;
+    gap:18px;
+    padding:22px 0;
+    border-bottom:1px solid var(--card-border);
+  }
+  .step:first-child{padding-top:0;}
+  .step:last-child{border-bottom:none;}
+  .step-num{
+    width:40px;height:40px;
+    border-radius:50%;
+    background:var(--sage-soft);
+    color:var(--ink);
+    font-family:Georgia,serif;
+    font-size:17px;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .step h3{
+    font-family:Georgia,"Iowan Old Style","Palatino Linotype","Book Antiqua",serif;
+    font-weight:400;
+    font-size:19px;
+    margin:2px 0 8px;
+    color:var(--ink);
+  }
+  .step p{
+    margin:0 0 10px;
+    font-size:15px;
+    line-height:1.55;
+    color:var(--slate);
+  }
+  .step p:last-child{margin-bottom:0;}
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--chip-bg);
+    border:1px solid var(--card-border);
+    border-radius:7px;
+    padding:3px 10px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink);
+    box-shadow:0 1px 2px rgba(0,0,0,0.05);
+  }
+  .chip.accent{background:var(--brass);color:#fff;border-color:var(--brass);}
+  .field-note{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    background:var(--paper);
+    border:1px solid var(--card-border);
+    border-radius:8px;
+    padding:12px 14px;
+    margin-top:12px;
+  }
+  .field-note .k{
+    font-size:12px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--brass);
+    font-weight:700;
+    flex-shrink:0;
+    padding-top:1px;
+    width:78px;
+  }
+  .field-note .v{font-size:14px;color:var(--ink);line-height:1.5;}
+
+  /* mapping card */
+  .map-card{
+    background:var(--paper);
+    border:1px solid var(--card-border);
+    border-radius:12px;
+    padding:26px 28px;
+    margin:0 0 44px;
+  }
+  .map-card h2{
+    font-family:Georgia,"Iowan Old Style","Palatino Linotype","Book Antiqua",serif;
+    font-weight:400;
+    font-size:21px;
+    margin:0 0 6px;
+    color:var(--ink);
+  }
+  .map-card > p{margin:0 0 20px;font-size:14.5px;color:var(--slate);}
+  .map-row{
+    display:grid;
+    grid-template-columns:1fr 24px 1fr;
+    align-items:center;
+    gap:10px;
+    padding:12px 0;
+    border-top:1px solid var(--card-border);
+  }
+  .map-row:first-of-type{border-top:none;}
+  .map-left .label{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--sage);font-weight:700;margin:0 0 3px;}
+  .map-left .val{font-size:14.5px;color:var(--ink);font-weight:600;}
+  .map-arrow{color:var(--slate);text-align:center;font-size:15px;}
+  .map-right{font-size:14px;color:var(--slate);line-height:1.4;}
+
+  /* tips */
+  .tips h2{
+    font-family:Georgia,"Iowan Old Style","Palatino Linotype","Book Antiqua",serif;
+    font-weight:400;
+    font-size:21px;
+    margin:0 0 16px;
+    color:var(--ink);
+  }
+  .tip-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .tip-list li{
+    display:grid;
+    grid-template-columns:20px 1fr;
+    gap:12px;
+    font-size:14.5px;
+    line-height:1.55;
+    color:var(--slate);
+  }
+  .tip-list li::before{content:"\2013";color:var(--brass);font-weight:700;}
+  .tip-list strong{color:var(--ink);}
+
+  @media (max-width:480px){
+    .quickref{grid-template-columns:1fr;}
+    .step{grid-template-columns:34px 1fr;gap:14px;}
+    .step-num{width:34px;height:34px;font-size:15px;}
+    .map-row{grid-template-columns:1fr;gap:4px;}
+    .map-arrow{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Paula Huffman &middot; Yoga &amp; Mindfulness Practice</p>
+  <h1>Adding a Class or Event</h1>
+  <p class="sub">Your website's Schedule page shows whatever is on your Google Calendar automatically. Add it here, and it shows up there.</p>
+
+  <div class="quickref">
+    <div class="qr-tile">
+      <p class="qr-num">1</p>
+      <p>Open your calendar and create a new event</p>
+    </div>
+    <div class="qr-tile">
+      <p class="qr-num">2</p>
+      <p>Fill in the title, date, and details</p>
+    </div>
+    <div class="qr-tile">
+      <p class="qr-num">3</p>
+      <p>Save &mdash; it appears on the site within a few minutes</p>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h3>Go to your calendar</h3>
+        <p>Open <strong>calendar.google.com</strong> and make sure you're signed in as <strong>paulashuffman@gmail.com</strong> &mdash; that's the calendar connected to your website. If you have more than one Google account, check the little picture in the top-right corner first.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Start a new event</h3>
+        <p>Click the <span class="chip accent">+ Create</span> button near the top-left, then choose <span class="chip">Event</span>.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h3>Give it a title</h3>
+        <p>Type the class or event name where it says <span class="chip">Add title</span> &mdash; for example, "Stretch Strengthen Restore" or "Yoga &amp; Meditation Beach Retreat." This is exactly what visitors will see on your Schedule page.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <h3>Set the date and time</h3>
+        <p>For a single class, set the start and end time as usual. For a multi-day retreat, turn on <span class="chip">All day</span> and set a start date and an end date &mdash; the site will show the full range.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">5</div>
+      <div>
+        <h3>Add the details</h3>
+        <p>Click <span class="chip">Add description</span> and type anything visitors need: the Zoom link, price, what to bring, or sign-up instructions. Everything you type here shows up under the event on the site.</p>
+        <div class="field-note">
+          <span class="k">Location</span>
+          <span class="v">Fill this in for in-person classes &mdash; it's a nice touch, even though the site doesn't display it directly yet.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">6</div>
+      <div>
+        <h3>Save it</h3>
+        <p>Click <span class="chip accent">Save</span>. That's the whole process &mdash; nothing else to publish or upload. Google usually refreshes the site's calendar view within a few minutes, sometimes up to an hour.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-card">
+    <h2>What shows up where</h2>
+    <p>The calendar and the website are the same data &mdash; here's exactly how each field maps.</p>
+    <div class="map-row">
+      <div class="map-left">
+        <p class="label">You type</p>
+        <p class="val">Event title</p>
+      </div>
+      <div class="map-arrow">&rarr;</div>
+      <div class="map-right">Becomes the bolded name of the class or event on the Schedule page.</div>
+    </div>
+    <div class="map-row">
+      <div class="map-left">
+        <p class="label">You type</p>
+        <p class="val">Date &amp; time</p>
+      </div>
+      <div class="map-arrow">&rarr;</div>
+      <div class="map-right">Sets when it appears in the calendar visitors see &mdash; today, this week, or further out.</div>
+    </div>
+    <div class="map-row">
+      <div class="map-left">
+        <p class="label">You type</p>
+        <p class="val">Description</p>
+      </div>
+      <div class="map-arrow">&rarr;</div>
+      <div class="map-right">Shown when someone clicks the event &mdash; the right place for Zoom links and pricing.</div>
+    </div>
+  </div>
+
+  <div class="tips">
+    <h2>Good to know</h2>
+    <ul class="tip-list">
+      <li><span><strong>Weekly classes:</strong> when creating the event, change "Does not repeat" to "Weekly" so you only have to set it up once, not every week.</span></li>
+      <li><span><strong>Editing an event:</strong> click on it in the calendar, then the pencil icon. Changes appear on the site the same way new events do.</span></li>
+      <li><span><strong>Cancelling something:</strong> open the event and click the trash icon. It disappears from the site once it's deleted.</span></li>
+      <li><span><strong>Nothing showing up?</strong> Give it 10&ndash;15 minutes, then refresh the website. If it still isn't there, double-check you added it to the right Google account.</span></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
