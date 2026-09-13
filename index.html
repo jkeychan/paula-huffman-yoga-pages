@@ -435,9 +435,18 @@
     .cred-list{grid-template-columns:1fr;}
     .footer-grid{flex-direction:column;align-items:flex-start;}
   }
+  .skip-link{
+    position:absolute;top:-40px;left:0;z-index:9999;
+    background:var(--ink);color:var(--ivory);
+    padding:8px 16px;border-radius:0 0 4px 0;
+    text-decoration:none;
+    transition:top 0.2s ease;
+  }
+  .skip-link:focus{top:0;}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GCBZDFH"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -456,6 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
+<main id="main-content">
 <section class="hero">
   <div class="wrap">
     <div>
@@ -509,7 +519,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="eyebrow-sm">Offerings</span>
     <h2>Services</h2>
     <div class="services-grid">
-      <div class="service-card has-photo">
+      <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-mbsr-8week.webp" type="image/webp">
           <img src="images/offering-mbsr-8week.jpg" alt="A group walking meditation along the beach" width="1141" height="1200" loading="lazy" decoding="async">
@@ -518,8 +528,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3><a href="https://en.wikipedia.org/wiki/Mindfulness-based_stress_reduction" target="_blank" rel="noopener">MBSR</a>: 8-Week Program</h3>
           <p>This full 8-week <a href="https://en.wikipedia.org/wiki/Mindfulness-based_stress_reduction" target="_blank" rel="noopener">MBSR</a> program, developed by Jon Kabat-Zinn, sets the gold standard for mindfulness training. Includes a one-hour complimentary orientation session, eight 2.5-hour sessions, and an in-person day retreat. You'll receive home practice guides and references for online supporting materials, including practice recordings. Delivered by Zoom.</p>
         </div>
-      </div>
-      <div class="service-card has-photo">
+      </article>
+      <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-mbsr-adapted.webp" type="image/webp">
           <img src="images/offering-mbsr-adapted.jpg" alt="A group seated in meditation on the beach" width="1200" height="1052" loading="lazy" decoding="async">
@@ -528,8 +538,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3><a href="https://en.wikipedia.org/wiki/Mindfulness-based_stress_reduction" target="_blank" rel="noopener">MBSR</a>: Adapted Program for Busy Times</h3>
           <p>Inspired by the evidence-based principles and practices of <a href="https://en.wikipedia.org/wiki/Mindfulness-based_stress_reduction" target="_blank" rel="noopener">MBSR</a>, offering a flexible format designed to meet the needs of today's participants. The course integrates mindfulness meditation, gentle mindful movement, body awareness, and practical strategies for responding to stress with greater clarity, resilience, and self-compassion. Six weeks, 2-hour weekly sessions, with home practice guides and references for online supporting materials, including practice recordings.</p>
         </div>
-      </div>
-      <div class="service-card has-photo">
+      </article>
+      <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-workshops.webp" type="image/webp">
           <img src="images/offering-workshops.jpg" alt="Paula guiding students through a standing stretch in a group class" width="924" height="1366" style="object-position:center 20%" loading="lazy" decoding="async">
@@ -538,8 +548,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>Specialty Workshops &amp; Mini Courses</h3>
           <p>1.5&ndash;2 hour workshops and mini-courses in both yoga and mindfulness, offered in person and via live Zoom on varying topics including Yoga &amp; Mindfulness for Sleep, Cultivating Mindfulness in Everyday Life, a complimentary introduction to mindfulness, and more.</p>
         </div>
-      </div>
-      <div class="service-card">
+      </article>
+      <article class="service-card">
         <h3>Brain Health &amp; Wellness Course</h3>
         <p>An experiential four-week, 1.5-hour-session course led by Paula as a Certified Brain Health Specialist. You'll learn more about:</p>
         <ul>
@@ -548,8 +558,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Brain health is heart health</li>
         </ul>
         <p>Includes complimentary Zoom yoga and meditation sessions, with monthly follow-up workshops.</p>
-      </div>
-      <div class="service-card has-photo">
+      </article>
+      <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-restore.webp" type="image/webp">
           <img src="images/offering-restore.jpg" alt="Paula assisting a student in a restorative forward fold" width="1233" height="1200" loading="lazy" decoding="async">
@@ -558,8 +568,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>Stretch Strengthen Restore Live Zoom Yoga</h3>
           <p>Practice yoga in the comfort of your own home! Weekly one-hour Alignment-Based Hatha Yoga, suitable for all ages and levels of practice, with adaptations offered to meet each student where they are. Monthly restorative yoga classes. Your first Hatha Yoga class is complimentary!</p>
         </div>
-      </div>
-      <div class="service-card has-photo">
+      </article>
+      <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-seasonal-retreat.webp" type="image/webp">
           <img src="images/offering-seasonal-retreat.jpg" alt="A seated meditation circle at a retreat lodge" width="1359" height="796" loading="lazy" decoding="async">
@@ -568,8 +578,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>Seasonal Wellness Retreat</h3>
           <p>An all-day in-person retreat held at <a href="https://www.newhopeccc.org/" target="_blank" rel="noopener">New Hope Camp &amp; Conference Center</a> in Chapel Hill. Discover the nurturing effects of being in nature while enjoying the beauty of each season. Activities include Community Resilience Method practices, a <a href="https://ggia.berkeley.edu/practice/body_scan_meditation" target="_blank" rel="noopener">body scan</a>, yoga, walking meditation, seated meditation, and loving-kindness meditation, wrapped around time for socialization and solitude.</p>
         </div>
-      </div>
-      <div class="service-card has-photo">
+      </article>
+      <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-beach-retreat.webp" type="image/webp">
           <img src="images/offering-beach-retreat.jpg" alt="The beach boardwalk at Trinity Center in Salter Path, NC" width="816" height="1144" loading="lazy" decoding="async">
@@ -578,8 +588,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>Yoga &amp; Meditation Beach Retreat</h3>
           <p>A 2&ndash;3 night residential retreat at <a href="https://trinity-ctr.org/" target="_blank" rel="noopener">Trinity Center</a> in Salter Path, NC, co-led with <a href="https://chathammills.studio/teachers/ann-burrus" target="_blank" rel="noopener">Ann Burrus, E&#8209;RYT</a>: yoga for all levels, meditation, and rest by the sea. A cozy respite for the winter doldrums, with private or semi-private rooms, private baths, and all meals included (special diets available).</p>
         </div>
-      </div>
-      <div class="service-card has-photo">
+      </article>
+      <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-private.webp" type="image/webp">
           <img src="images/offering-private.jpg" alt="Paula demonstrating a standing yoga pose during a private session" width="1329" height="1200" loading="lazy" decoding="async">
@@ -588,7 +598,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>Specialty &amp; Private Programs</h3>
           <p>Customized sessions for home-school groups, book clubs, corporate teams, educators, students, and healthcare practitioners, virtual or on-location.</p>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -689,6 +699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+</main>
 
 <footer id="contact">
   <div class="wrap">
