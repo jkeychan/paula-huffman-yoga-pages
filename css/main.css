@@ -263,14 +263,31 @@
   .schedule-card p{color:var(--slate);font-size:14.8px;margin:0 0 18px;}
   .schedule-embed{
     width:100%;
-    height:480px;
+    height:560px;
     border:1px solid rgba(43,54,48,0.1);
     border-radius:8px;
     display:block;
   }
+  .schedule-weekly{margin-top:18px;padding-top:18px;border-top:1px solid rgba(43,54,48,0.1);}
+  .schedule-weekly h4{font-family:var(--serif);font-weight:400;font-size:15.5px;margin:0 0 8px;color:var(--ink);}
+  .schedule-weekly ul{margin:0;padding-left:18px;color:var(--slate);font-size:14.2px;}
+  .schedule-weekly li{margin:0 0 4px;}
+  .schedule-registration{margin-top:18px;font-size:13.5px;color:var(--slate);}
 
   /* -- what is mindfulness / benefits of yoga -- */
   .learn-more{background:var(--paper);}
+
+  /* -- free class / workshop callout -- */
+  .cta-banner{
+    background:var(--paper);
+    border-top:1px solid rgba(43,54,48,0.1);
+    border-bottom:1px solid rgba(43,54,48,0.1);
+    text-align:center;
+    padding:56px 0;
+  }
+  .cta-banner .wrap{max-width:640px;}
+  .cta-banner .eyebrow-sm{color:var(--brass);}
+  .cta-banner p{color:var(--slate);margin:0 0 26px;}
 
   /* -- services -- */
   .services-grid{
