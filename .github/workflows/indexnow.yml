@@ -8,13 +8,13 @@ jobs:
   submit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
       - name: Submit sitemap URLs to IndexNow
+        env:
+          SITEMAP_URL: https://raw.githubusercontent.com/jkeychan/paula-huffman-yoga-pages/${{ github.sha }}/sitemap.xml
         run: |
           KEY="d488be4822ac7910e0f5e70892a17f30"
           HOST="paulahuffman.com"
-          URLS=$(grep -oE '<loc>[^<]+</loc>' sitemap.xml | sed -E 's#</?loc>##g' | jq -R . | jq -s .)
+          URLS=$(curl -s "$SITEMAP_URL" | grep -oE '<loc>[^<]+</loc>' | sed -E 's#</?loc>##g' | jq -R . | jq -s .)
 
           curl -s -X POST "https://api.indexnow.org/indexnow" \
             -H "Content-Type: application/json; charset=utf-8" \
