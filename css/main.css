@@ -246,6 +246,35 @@
     opacity:0.7;
   }
 
+  /* -- testimonials -- */
+  .testimonials{background:var(--paper);}
+  .testimonial-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border:1px solid rgba(43,54,48,0.1);
+  }
+  .testimonial-grid > *:last-child:nth-child(odd){grid-column:1 / -1;}
+  .testimonial-card{
+    padding:32px 34px;
+    background:var(--ivory);
+    border-right:1px solid rgba(43,54,48,0.1);
+    border-bottom:1px solid rgba(43,54,48,0.1);
+  }
+  .testimonial-card p{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:16.5px;
+    color:var(--ink);
+    margin:0 0 12px;
+  }
+  .testimonial-name{
+    font-size:13px;
+    letter-spacing:0.03em;
+    color:var(--brass);
+    text-transform:uppercase;
+  }
+
   /* -- schedule -- */
   .schedule{background:var(--paper);}
   .schedule-grid{
@@ -396,6 +425,7 @@
     .about .wrap{grid-template-columns:1fr;gap:32px;}
     .context-grid{grid-template-columns:1fr;}
     .context-card + .context-card{border-left:none;border-top:1px solid rgba(43,54,48,0.1);}
+    .testimonial-grid{grid-template-columns:1fr;}
     .services-grid{grid-template-columns:1fr;}
     .schedule-grid{grid-template-columns:1fr;}
     .cred-list{grid-template-columns:1fr;}
