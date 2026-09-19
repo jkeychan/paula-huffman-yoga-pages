@@ -261,13 +261,6 @@
     border-right:1px solid rgba(43,54,48,0.1);
     border-bottom:1px solid rgba(43,54,48,0.1);
   }
-  .testimonial-stars{
-    display:block;
-    color:var(--brass);
-    font-size:14px;
-    letter-spacing:2px;
-    margin-bottom:10px;
-  }
   .testimonial-card p{
     font-family:var(--serif);
     font-style:italic;
