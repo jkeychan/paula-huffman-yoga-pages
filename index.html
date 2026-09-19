@@ -30,42 +30,145 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Paula Huffman",
-  "url": "https://paulahuffman.com/",
-  "image": "https://paulahuffman.com/images/about-headshot.jpg",
-  "jobTitle": "Yoga & Mindfulness Instructor",
-  "description": "Registered Nurse, E-RYT yoga teacher, and MBSR instructor with 40+ years in health and education, teaching yoga, mindfulness, and MBSR courses via Zoom and in-person in North Carolina.",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "UNC Chapel Hill School of Medicine, Program on Integrative Medicine"
-  },
-  "hasCredential": [
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Registered Nurse (RN)" },
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "E-RYT (Experienced Registered Yoga Teacher)" },
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Mindfulness-Based Stress Reduction (MBSR) Instructor" }
-  ],
-  "knowsAbout": ["Mindfulness-Based Stress Reduction", "Restorative Yoga", "Yoga Therapy", "Brain Health", "Trauma-Sensitive Mindfulness"],
-  "sameAs": ["https://www.google.com/search?kgmid=/g/11zxn520dd", "https://www.linkedin.com/in/paula-huffman-a95ba1229"],
-  "makesOffer": [
+  "@graph": [
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "In-Person Yoga, Mindfulness & MBSR Instruction",
-        "areaServed": [
-          { "@type": "Place", "name": "Wilmington, NC & the Cape Fear Coast" },
-          { "@type": "Place", "name": "NC Triangle (Orange & Durham Counties)" }
-        ]
-      }
+      "@type": "WebSite",
+      "@id": "https://paulahuffman.com/#website",
+      "url": "https://paulahuffman.com/",
+      "name": "Paula Huffman | Yoga, Mindfulness & MBSR Classes in NC & Online",
+      "inLanguage": "en-US",
+      "about": { "@id": "https://paulahuffman.com/#person" }
     },
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Virtual Yoga, Mindfulness & MBSR Instruction via Zoom",
-        "areaServed": { "@type": "State", "name": "North Carolina" }
-      }
+      "@type": "Person",
+      "@id": "https://paulahuffman.com/#person",
+      "name": "Paula Huffman",
+      "url": "https://paulahuffman.com/",
+      "image": "https://paulahuffman.com/images/about-headshot.jpg",
+      "jobTitle": "Yoga & Mindfulness Instructor",
+      "description": "Registered Nurse, E-RYT yoga teacher, and MBSR instructor with 40+ years in health and education, teaching yoga, mindfulness, and MBSR courses via Zoom and in-person in North Carolina.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "UNC Chapel Hill School of Medicine, Program on Integrative Medicine"
+      },
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "Registered Nurse (RN)" },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "E-RYT (Experienced Registered Yoga Teacher)" },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "Mindfulness-Based Stress Reduction (MBSR) Instructor" }
+      ],
+      "knowsAbout": ["Mindfulness-Based Stress Reduction", "Restorative Yoga", "Yoga Therapy", "Brain Health", "Trauma-Sensitive Mindfulness"],
+      "sameAs": ["https://www.google.com/search?kgmid=/g/11zxn520dd", "https://www.linkedin.com/in/paula-huffman-a95ba1229"],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "In-Person Yoga, Mindfulness & MBSR Instruction",
+            "areaServed": [
+              { "@type": "Place", "name": "Wilmington, NC & the Cape Fear Coast" },
+              { "@type": "Place", "name": "NC Triangle (Orange & Durham Counties)" }
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Virtual Yoga, Mindfulness & MBSR Instruction via Zoom",
+            "areaServed": { "@type": "State", "name": "North Carolina" }
+          }
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Yoga, Mindfulness & MBSR Offerings",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "MBSR: 8-Week Program",
+              "description": "An 8-week Mindfulness-Based Stress Reduction program developed by Jon Kabat-Zinn, delivered by Zoom, with a complimentary orientation, eight 2.5-hour sessions, and an in-person day retreat.",
+              "provider": { "@id": "https://paulahuffman.com/#person" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "MBSR: Adapted Program for Busy Times",
+              "description": "A flexible six-week mindfulness and mindful movement course inspired by MBSR, with weekly 2-hour sessions.",
+              "provider": { "@id": "https://paulahuffman.com/#person" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Specialty Workshops & Mini Courses",
+              "description": "1.5-2 hour yoga and mindfulness workshops and mini-courses offered in person and via live Zoom on topics including Yoga & Mindfulness for Sleep and Cultivating Mindfulness in Everyday Life.",
+              "provider": { "@id": "https://paulahuffman.com/#person" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Brain Health & Wellness Course",
+              "description": "A four-week experiential course led by a Certified Brain Health Specialist, including complimentary Zoom yoga and meditation sessions.",
+              "provider": { "@id": "https://paulahuffman.com/#person" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stretch Strengthen Restore Live Zoom Yoga",
+              "serviceType": "Yoga Instruction",
+              "description": "Weekly one-hour Alignment-Based Hatha Yoga classes via Zoom, suitable for all ages and levels, with a complimentary first class.",
+              "provider": { "@id": "https://paulahuffman.com/#person" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Seasonal Wellness Retreat",
+              "serviceType": "Yoga & Mindfulness Retreat",
+              "description": "An all-day in-person retreat at New Hope Camp & Conference Center in Chapel Hill combining yoga, walking meditation, seated meditation, and loving-kindness meditation.",
+              "provider": { "@id": "https://paulahuffman.com/#person" },
+              "areaServed": { "@type": "Place", "name": "Chapel Hill, NC" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Yoga & Meditation Beach Retreat",
+              "serviceType": "Yoga & Mindfulness Retreat",
+              "description": "A 2-3 night residential yoga and meditation retreat at Trinity Center in Salter Path, NC, co-led with Ann Burrus, E-RYT.",
+              "provider": { "@id": "https://paulahuffman.com/#person" },
+              "areaServed": { "@type": "Place", "name": "Salter Path, NC" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Specialty & Private Programs",
+              "description": "Customized yoga and mindfulness sessions for home-school groups, book clubs, corporate teams, educators, students, and healthcare practitioners, virtual or on-location.",
+              "provider": { "@id": "https://paulahuffman.com/#person" }
+            }
+          }
+        ]
+      },
+      "review": [
+        { "@type": "Review", "reviewBody": "I've taken six MBSR classes with Paula. I live with lupus and anxiety, and mindfulness reduces both - I could take these classes forever.", "author": { "@type": "Person", "name": "Michelle" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+        { "@type": "Review", "reviewBody": "This is my third time taking Paula's Mindfulness course. Each class teaches something I can use in a stressful moment, backed by real science. It's a gem, and I feel lucky to have been part of it.", "author": { "@type": "Person", "name": "Sue Field" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+        { "@type": "Review", "reviewBody": "Paula has been my yoga teacher for seven years. Her kindness, encouragement, and guidance have helped me be stronger in my body and in my mind.", "author": { "@type": "Person", "name": "Diane B" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+        { "@type": "Review", "reviewBody": "I've taken Paula's yoga classes for years, starting in person at Kure Beach and continuing on Zoom since Covid. She's kind, empathetic, and attentive to every student's needs.", "author": { "@type": "Person", "name": "Karen C" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+        { "@type": "Review", "reviewBody": "The winter retreat is one of my favorite events - peace and quiet by the ocean, with wonderful teaching from Paula and Ann. My practice is always renewed after I attend.", "author": { "@type": "Person", "name": "Kathy" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } }
+      ]
     }
   ]
 }
@@ -139,7 +242,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="about-photo">
         <picture>
           <source srcset="images/about-headshot.webp" type="image/webp">
-          <img src="images/about-headshot.jpg" alt="Paula Huffman smiling outdoors in front of flowering shrubs" width="1200" height="906" loading="lazy" decoding="async">
+          <img src="images/about-headshot.jpg" alt="Paula Huffman, yoga and mindfulness instructor, smiling outdoors in front of flowering shrubs" width="1200" height="906" loading="lazy" decoding="async">
         </picture>
       </div>
     </div>
@@ -159,7 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-mbsr-8week.webp" type="image/webp">
-          <img src="images/offering-mbsr-8week.jpg" alt="A group walking meditation along the beach" width="1054" height="658" loading="lazy" decoding="async">
+          <img src="images/offering-mbsr-8week.jpg" alt="A group mindfulness walking meditation on the beach during Paula's MBSR program" width="1054" height="658" loading="lazy" decoding="async">
         </picture></div>
         <div class="service-body">
           <h3><a href="https://en.wikipedia.org/wiki/Mindfulness-based_stress_reduction" target="_blank" rel="noopener">MBSR</a>: 8-Week Program</h3>
@@ -169,7 +272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-mbsr-adapted.webp" type="image/webp">
-          <img src="images/offering-mbsr-adapted.jpg" alt="A group seated in meditation on the beach" width="1054" height="658" loading="lazy" decoding="async">
+          <img src="images/offering-mbsr-adapted.jpg" alt="A group in mindfulness meditation on the beach during Paula's adapted MBSR program" width="1054" height="658" loading="lazy" decoding="async">
         </picture></div>
         <div class="service-body">
           <h3><a href="https://en.wikipedia.org/wiki/Mindfulness-based_stress_reduction" target="_blank" rel="noopener">MBSR</a>: Adapted Program for Busy Times</h3>
@@ -179,7 +282,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-workshops.webp" type="image/webp">
-          <img src="images/offering-workshops.jpg" alt="Paula guiding students through a standing stretch in a group class" width="924" height="1366" style="object-position:center 20%" loading="lazy" decoding="async">
+          <img src="images/offering-workshops.jpg" alt="Paula guiding students through a standing yoga stretch in a group workshop" width="924" height="1366" style="object-position:center 20%" loading="lazy" decoding="async">
         </picture></div>
         <div class="service-body">
           <h3>Specialty Workshops &amp; Mini Courses</h3>
@@ -209,7 +312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-seasonal-retreat.webp" type="image/webp">
-          <img src="images/offering-seasonal-retreat.jpg" alt="Students in seated meditation during one of Paula's classes" width="1200" height="770" loading="lazy" decoding="async">
+          <img src="images/offering-seasonal-retreat.jpg" alt="Students in seated mindfulness meditation during one of Paula's yoga classes" width="1200" height="770" loading="lazy" decoding="async">
         </picture></div>
         <div class="service-body">
           <h3>Seasonal Wellness Retreat</h3>
@@ -219,7 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="service-card has-photo">
         <div class="service-photo"><picture>
           <source srcset="images/offering-beach-retreat.webp" type="image/webp">
-          <img src="images/offering-beach-retreat.jpg" alt="The beach boardwalk at Trinity Center in Salter Path, NC" width="816" height="1144" loading="lazy" decoding="async">
+          <img src="images/offering-beach-retreat.jpg" alt="The beach boardwalk at Trinity Center in Salter Path, NC, site of Paula's yoga and meditation beach retreat" width="816" height="1144" loading="lazy" decoding="async">
         </picture></div>
         <div class="service-body">
           <h3>Yoga &amp; Meditation Beach Retreat</h3>
@@ -284,22 +387,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap" style="padding-top:8px;">
     <div class="testimonial-grid">
       <div class="testimonial-card">
+        <span class="testimonial-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;I&rsquo;ve taken six MBSR classes with Paula. I live with lupus and anxiety, and mindfulness reduces both &mdash; I could take these classes forever.&rdquo;</p>
         <span class="testimonial-name">Michelle, MBSR Student</span>
       </div>
       <div class="testimonial-card">
+        <span class="testimonial-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;This is my third time taking Paula&rsquo;s Mindfulness course. Each class teaches something I can use in a stressful moment, backed by real science. It&rsquo;s a gem, and I feel lucky to have been part of it.&rdquo;</p>
         <span class="testimonial-name">Sue Field, Mindfulness Class</span>
       </div>
       <div class="testimonial-card">
+        <span class="testimonial-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;Paula has been my yoga teacher for seven years. Her kindness, encouragement, and guidance have helped me be stronger in my body and in my mind.&rdquo;</p>
         <span class="testimonial-name">Diane B, Yoga Student</span>
       </div>
       <div class="testimonial-card">
+        <span class="testimonial-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;I&rsquo;ve taken Paula&rsquo;s yoga classes for years, starting in person at Kure Beach and continuing on Zoom since Covid. She&rsquo;s kind, empathetic, and attentive to every student&rsquo;s needs.&rdquo;</p>
         <span class="testimonial-name">Karen C, Yoga Student</span>
       </div>
       <div class="testimonial-card">
+        <span class="testimonial-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;The winter retreat is one of my favorite events &mdash; peace and quiet by the ocean, with wonderful teaching from Paula and Ann. My practice is always renewed after I attend.&rdquo;</p>
         <span class="testimonial-name">Kathy, Retreat Participant</span>
       </div>

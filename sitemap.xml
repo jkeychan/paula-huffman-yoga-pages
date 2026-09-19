@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://paulahuffman.com/</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/hero-portrait.jpg</image:loc>
+      <image:title>Yoga and mindfulness retreat group meditation circle</image:title>
+      <image:caption>A group meditation circle at one of Paula's yoga and mindfulness retreats</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/about-headshot.jpg</image:loc>
+      <image:title>Paula Huffman, yoga and mindfulness instructor</image:title>
+      <image:caption>Paula Huffman, yoga and mindfulness instructor, smiling outdoors in front of flowering shrubs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/offering-mbsr-8week.jpg</image:loc>
+      <image:title>MBSR 8-Week Program mindfulness walking meditation</image:title>
+      <image:caption>A group mindfulness walking meditation on the beach during Paula's MBSR program</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/offering-mbsr-adapted.jpg</image:loc>
+      <image:title>Adapted MBSR Program mindfulness meditation</image:title>
+      <image:caption>A group in mindfulness meditation on the beach during Paula's adapted MBSR program</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/offering-workshops.jpg</image:loc>
+      <image:title>Yoga and mindfulness workshop</image:title>
+      <image:caption>Paula guiding students through a standing yoga stretch in a group workshop</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/offering-restore.jpg</image:loc>
+      <image:title>Restorative yoga class</image:title>
+      <image:caption>Paula assisting a student in a restorative yoga forward fold</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/offering-seasonal-retreat.jpg</image:loc>
+      <image:title>Seasonal Wellness Retreat mindfulness meditation</image:title>
+      <image:caption>Students in seated mindfulness meditation during one of Paula's yoga classes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/offering-beach-retreat.jpg</image:loc>
+      <image:title>Yoga and Meditation Beach Retreat at Trinity Center</image:title>
+      <image:caption>The beach boardwalk at Trinity Center in Salter Path, NC, site of Paula's yoga and meditation beach retreat</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/offering-private.jpg</image:loc>
+      <image:title>Private yoga session with Paula Huffman</image:title>
+      <image:caption>Paula demonstrating a standing yoga pose during a private session</image:caption>
+    </image:image>
   </url>
 </urlset>
