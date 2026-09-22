@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://app.icontact.com https://www.google.com https://www.gstatic.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://app.icontact.com; frame-src https://calendar.google.com https://www.google.com; img-src 'self' data: https://app.icontact.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; connect-src 'self' https://app.icontact.com https://www.google.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; base-uri 'self'; form-action 'self' https://app.icontact.com; object-src 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://app.icontact.com https://www.google.com https://www.gstatic.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://app.icontact.com; frame-src https://calendar.google.com https://www.google.com https://www.youtube-nocookie.com; img-src 'self' data: https://app.icontact.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://i.ytimg.com; connect-src 'self' https://app.icontact.com https://www.google.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; base-uri 'self'; form-action 'self' https://app.icontact.com; object-src 'none';">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <!-- Google Tag Manager -->
 <script src="js/gtm-loader.js"></script>
@@ -162,6 +162,16 @@
           }
         ]
       }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://paulahuffman.com/#video-mindfulness-brain",
+      "name": "Mindfulness Doesn't Clear Your Mind—It Does This Instead",
+      "description": "Psychiatrist Dr. Tracey Marks explains how a consistent mindfulness practice changes the brain, including effects on the amygdala and the body's stress response.",
+      "thumbnailUrl": ["https://i.ytimg.com/vi/cjkAkGDNiEk/maxresdefault.jpg"],
+      "uploadDate": "2025-10-29",
+      "duration": "PT9M38S",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/cjkAkGDNiEk"
     }
   ]
 }
@@ -468,6 +478,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="context-card">
         <span class="eyebrow-sm">What Is Mindfulness?</span>
         <p>As defined by Jon Kabat-Zinn, &ldquo;Mindfulness is awareness that arises through paying attention, on purpose, in the present moment, non-judgmentally, in the service of self-understanding and wisdom.&rdquo; It is developed through a consistent practice of meditation, both formal and informal, in everyday life. The practice of mindfulness provides the ability to not only mitigate the effects of stress but to live your life more fully through presence and awareness of moment-to-moment experience. Some outcomes of a consistent practice may include better sleep, improved communication, pain management, nervous system regulation, and a decrease in the ruminating, catastrophic thinking that so often creates anxiety and angst &mdash; outcomes that are evidence-based, supported by research.</p>
+        <div class="video-embed" data-yt-id="cjkAkGDNiEk" data-yt-title="Mindfulness Doesn't Clear Your Mind—It Does This Instead, by Dr. Tracey Marks">
+          <img src="https://i.ytimg.com/vi/cjkAkGDNiEk/maxresdefault.jpg" alt="" loading="lazy" decoding="async">
+          <button type="button" class="video-play" aria-label="Play: Mindfulness Doesn't Clear Your Mind—It Does This Instead, by Dr. Tracey Marks"></button>
+        </div>
       </div>
       <div class="context-card">
         <span class="eyebrow-sm">Benefits of Yoga</span>
@@ -494,6 +508,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="js/reveal.js"></script>
+<script src="js/video-embed.js"></script>
 
 </body>
 </html>
