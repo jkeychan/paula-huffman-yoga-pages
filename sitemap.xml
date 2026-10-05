@@ -7,29 +7,24 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://paulahuffman.com/images/hero-portrait.jpg</image:loc>
-      <image:title>Yoga and mindfulness retreat group meditation circle</image:title>
-      <image:caption>A group meditation circle at one of Paula's yoga and mindfulness retreats</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://paulahuffman.com/images/about-headshot.jpg</image:loc>
       <image:title>Paula Huffman, yoga and mindfulness instructor</image:title>
       <image:caption>Paula Huffman, yoga and mindfulness instructor, smiling outdoors in front of flowering shrubs</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://paulahuffman.com/images/offering-mbsr-8week.jpg</image:loc>
-      <image:title>MBSR 8-Week Program mindfulness walking meditation</image:title>
-      <image:caption>A group mindfulness walking meditation on the beach during Paula's MBSR program</image:caption>
+      <image:title>MBSR 8-Week Program mindfulness illustration</image:title>
+      <image:caption>Illustration of a person meditating cross-legged surrounded by a laptop, books, a lamp and a plant</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://paulahuffman.com/images/offering-mbsr-adapted.jpg</image:loc>
-      <image:title>Adapted MBSR Program mindfulness meditation</image:title>
-      <image:caption>A group in mindfulness meditation on the beach during Paula's adapted MBSR program</image:caption>
+      <image:title>Adapted MBSR Program for busy times</image:title>
+      <image:caption>An overwhelmed office worker covered in sticky notes, her laptop buried in more</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://paulahuffman.com/images/offering-workshops.jpg</image:loc>
-      <image:title>Yoga and mindfulness workshop</image:title>
-      <image:caption>Paula guiding students through a standing yoga stretch in a group workshop</image:caption>
+      <image:title>Mindfulness workshops and mini courses</image:title>
+      <image:caption>A group seated in a circle during Paula's MBSR program</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://paulahuffman.com/images/offering-restore.jpg</image:loc>
@@ -38,18 +33,23 @@
     </image:image>
     <image:image>
       <image:loc>https://paulahuffman.com/images/offering-seasonal-retreat.jpg</image:loc>
-      <image:title>Seasonal Wellness Retreat mindfulness meditation</image:title>
-      <image:caption>Students in seated mindfulness meditation during one of Paula's yoga classes</image:caption>
+      <image:title>Seasonal Wellness Retreat</image:title>
+      <image:caption>Three women talking over tea in a sunlit room beside a window onto the trees</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://paulahuffman.com/images/offering-beach-retreat.jpg</image:loc>
-      <image:title>Yoga and Meditation Beach Retreat at Trinity Center</image:title>
-      <image:caption>The beach boardwalk at Trinity Center in Salter Path, NC, site of Paula's yoga and meditation beach retreat</image:caption>
+      <image:title>Yoga and Meditation Beach Retreat</image:title>
+      <image:caption>A small group meditating on the beach beside a sparkling sea</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://paulahuffman.com/images/offering-private.jpg</image:loc>
-      <image:title>Private yoga session with Paula Huffman</image:title>
-      <image:caption>Paula demonstrating a standing yoga pose during a private session</image:caption>
+      <image:title>Specialty and private yoga and mindfulness programs</image:title>
+      <image:caption>Students in seated mindfulness meditation during one of Paula's yoga classes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://paulahuffman.com/images/offering-brain-health.jpg</image:loc>
+      <image:title>Brain Health and Wellness Course</image:title>
+      <image:caption>Illustration of a brain, one half blue and one half magenta, with rays of light</image:caption>
     </image:image>
   </url>
 </urlset>
