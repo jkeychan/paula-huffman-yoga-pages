@@ -7,7 +7,6 @@ Offerings include MBSR courses, mindfulness workshops, a brain health course, re
 ## Pages
 
 - [Home](https://paulahuffman.com/): Full overview of offerings, credentials, schedule, and teaching locations
-- [Calendar Guide](https://paulahuffman.com/calendar-guide.html): Instructions for managing the class schedule (internal/admin use)
 
 ## Offerings
 
